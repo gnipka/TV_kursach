@@ -157,5 +157,11 @@ namespace TV_kursach
             Decommissioning decommissioning = new Decommissioning();
             decommissioning.Show();
         }
+
+        private void Button_Click_OpenOrder(object sender, RoutedEventArgs e)
+        {
+            Order order = new Order();
+            order.Show();
+        }
     }
 }

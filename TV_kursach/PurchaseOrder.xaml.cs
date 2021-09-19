@@ -28,7 +28,7 @@ namespace TV_kursach
                 ConnectionWithDB.OpenConnection();
                 MySqlCommand cmd = new MySqlCommand();
                 cmd.Connection = ConnectionWithDB.GetConnection();
-                ; cmd.CommandText = "SELECT Storage_ID FROM storage";
+                cmd.CommandText = "SELECT Storage_ID FROM storage";
                 MySqlDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {

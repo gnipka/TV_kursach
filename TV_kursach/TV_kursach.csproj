@@ -106,6 +106,9 @@
     <Compile Include="ManagementWC.xaml.cs">
       <DependentUpon>ManagementWC.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Order.xaml.cs">
+      <DependentUpon>Order.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PurchaseOrder.xaml.cs">
       <DependentUpon>PurchaseOrder.xaml</DependentUpon>
     </Compile>
@@ -134,6 +137,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="ManagementWC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Order.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
