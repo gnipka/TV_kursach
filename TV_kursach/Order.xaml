@@ -5,15 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TV_kursach"
         mc:Ignorable="d"
-        Title="Order" Height="400" Width="800">
-    <Grid>
+        Title="Order" Height="557.755" Width="1009.962" Loaded="Window_Loaded">
+    <Grid Margin="0,0,-0.333,58">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="238*"/>
-            <ColumnDefinition Width="64*"/>
-            <ColumnDefinition Width="161*"/>
-            <ColumnDefinition Width="189*"/>
+            <ColumnDefinition Width="303*"/>
+            <ColumnDefinition Width="152*"/>
+            <ColumnDefinition Width="243*"/>
+            <ColumnDefinition Width="285*"/>
         </Grid.ColumnDefinitions>
-        <Border MinWidth="600" Margin="12,68,12.667,67.667" Background="AliceBlue" VerticalAlignment ="Center" Padding="30" MaxWidth="950" CornerRadius="20" Grid.ColumnSpan="4">
+        <Border MinWidth="600" Margin="12,10,12.667,-41.333" Background="AliceBlue" VerticalAlignment ="Center" Padding="30" MaxWidth="950" CornerRadius="20" Grid.ColumnSpan="4" Height="480">
             <Border.Effect>
                 <DropShadowEffect BlurRadius="30" Color="LightGray" ShadowDepth="0"/>
             </Border.Effect>
@@ -22,33 +22,48 @@
                     <TextBlock HorizontalAlignment="Left" Text="Заказ закупок" FontSize="30" FontWeight="Bold" Margin="0 0 0 0" />
                 </Grid>
                 <Grid x:Name="grid" Width="550" Height="170" Margin="4,0,4.667,0" >
-                    <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="371*"/>
+                        <ColumnDefinition Width="179*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.ColumnSpan="2">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="36*"/>
                             <ColumnDefinition Width="19*"/>
                         </Grid.ColumnDefinitions>
-                        <StackPanel Grid.ColumnSpan="2">
+                        <StackPanel Grid.ColumnSpan="1">
 
                             <Grid>
-                                <TextBlock HorizontalAlignment="Left" Text="Материал" FontSize="20" Margin="146,0,0,0"></TextBlock>
-                                <ComboBox x:Name="comboboxNom" IsReadOnly="False" IsEditable="True" HorizontalAlignment="Left" FontSize="20" Height="32" Margin="264,0,0,0"  VerticalAlignment="Top" Width="170" RenderTransformOrigin="0.096,0.457"/>
+                                <TextBlock Text="Создание заказа" TextDecorations="underline" FontSize="20" Margin="-163,4,163,-4"/>
+                                <TextBlock HorizontalAlignment="Left" Text="Материал" FontSize="20" Margin="-148,48,0,-48" Height="32"/>
+                                <ComboBox x:Name="comboboxNom" IsReadOnly="False" IsEditable="True" HorizontalAlignment="Left" FontSize="20" Height="32"  VerticalAlignment="Top" Width="170" RenderTransformOrigin="0.096,0.457" Margin="-30,48,0,-48"/>
                             </Grid>
                             <Grid>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="19*"/>
                                     <ColumnDefinition Width="91*"/>
                                 </Grid.ColumnDefinitions>
-                                <TextBlock HorizontalAlignment="Left" Text="Количество"  FontSize="20" Margin="36.667,0,0,0" Grid.Column="1"/>
-                                <TextBox x:Name="textboxCount" HorizontalAlignment="Left" FontSize="20" Height="32" Margin="168.667,0,0,0" VerticalAlignment="Top" Width="170" RenderTransformOrigin="0.096,0.457" Grid.Column="1"/>
+                                <TextBlock HorizontalAlignment="Left" Text="Количество"  FontSize="20" Margin="-162,48,0,-48"/>
+                                <TextBox x:Name="textboxCount" HorizontalAlignment="Left" FontSize="20" Height="32" VerticalAlignment="Top" Width="170" RenderTransformOrigin="0.096,0.457" Grid.ColumnSpan="2" Margin="-30,48,0,-48"/>
                             </Grid>
                         </StackPanel>
 
                     </Grid>
 
+                    <DataGrid x:Name="datagrid" Margin="173,10,-171,-141" Grid.ColumnSpan="2"  >
+
+                    </DataGrid>
+
 
                 </Grid>
             </StackPanel>
         </Border>
-        <Button Content="Сделать заказ" Click="Button_Click_MakeAnOrder" FontSize="20" FontWeight="DemiBold" HorizontalAlignment="Left" Background="AliceBlue" BorderBrush="Transparent" Margin="146.667,248,0,0" VerticalAlignment="Top" Width="179" Grid.ColumnSpan="2" Grid.Column="2"/>
+        <Button Content="Сделать заказ" Click="Button_Click_MakeAnOrder" FontSize="20" FontWeight="DemiBold" HorizontalAlignment="Left" Background="AliceBlue" BorderBrush="Transparent" Margin="214,222,0,0" VerticalAlignment="Top" Width="168" Grid.ColumnSpan="2" Height="31" RenderTransformOrigin="0.444,-1.17"/>
+        <TextBlock HorizontalAlignment="Left" Text="ID заказа" FontSize="20" Margin="86,317,0,121.667" Height="32"/>
+        <ComboBox x:Name="comboboxIDOrder" IsReadOnly="False" IsEditable="True" HorizontalAlignment="Left" FontSize="20" Height="32"  VerticalAlignment="Top" Width="170" RenderTransformOrigin="0.096,0.457" Margin="196,316,0,0" Grid.ColumnSpan="2"/>
+        <ComboBox x:Name="comboboxStatus" IsReadOnly="False" IsEditable="True" HorizontalAlignment="Left" FontSize="20" Height="32"  VerticalAlignment="Top" Width="170" RenderTransformOrigin="0.096,0.457" Margin="196,348,0,0" Grid.ColumnSpan="2"/>
+        <TextBlock HorizontalAlignment="Left" Text="Статус"  FontSize="20" Margin="110,350,0,66.667"/>
+        <TextBlock Text="Изменение статуса заказа" TextDecorations="underline" FontSize="20" Margin="55,270,39.667,146.667" Grid.ColumnSpan="2"/>
+        <Button Content="Изменить" Click="Button_Click_ChangeStatus" FontSize="20" FontWeight="DemiBold" HorizontalAlignment="Left" Background="AliceBlue" BorderBrush="Transparent" Margin="230,386,0,0" VerticalAlignment="Top" Width="168" Grid.ColumnSpan="2" Height="31" RenderTransformOrigin="0.444,-1.17"/>
     </Grid>
 </Window>
