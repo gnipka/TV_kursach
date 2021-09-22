@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TV_kursach"
         mc:Ignorable="d"
-        Title="AddData" Height="355" Width="650" ContentRendered="Window_ContentRendered">
+        Title="AddData" Height="355" Width="650" ContentRendered="Window_ContentRendered" Icon="TV_4089.png">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="457*"/>

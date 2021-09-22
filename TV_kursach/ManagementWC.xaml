@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TV_kursach"
         mc:Ignorable="d"
-        Title="ManagementWC" Height="450" Width="800">
+        Title="ManagementWC" Height="450" Width="800" Icon="TV_4089.png">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="238*"/>
@@ -30,7 +30,7 @@
                         <StackPanel Grid.ColumnSpan="2">
                             <Grid>
                                 <TextBlock HorizontalAlignment="Left" Text="ID РЦ" FontSize="20" Margin="186,0,0,0"></TextBlock>
-                                <ComboBox x:Name="comboboxIDWC" FontSize="20" IsReadOnly="False" IsEditable="True" Margin="265,0,119,-0.333" />
+                                <ComboBox x:Name="comboboxIDWC" FontSize="20" IsReadOnly="True" IsEditable="True" Margin="265,0,119,-0.333" />
                             </Grid>
                             <Grid Margin="265,0,119,0">
                                 <Grid.RowDefinitions>
@@ -38,7 +38,7 @@
                                     <RowDefinition Height="11*"/>
                                 </Grid.RowDefinitions>
                                 <TextBlock HorizontalAlignment="Left" Text="Статус" FontSize="20" Margin="-84,0,0,-0.667" Grid.RowSpan="2"></TextBlock>
-                                <ComboBox x:Name="comboboxStatus" SelectionChanged="comboboxStatus_SelectionChanged" FontSize="20" IsReadOnly="False" IsEditable="True"  Margin="0,0,0,-0.333" Grid.RowSpan="2" />
+                                <ComboBox x:Name="comboboxStatus" SelectionChanged="comboboxStatus_SelectionChanged" FontSize="20" IsReadOnly="True" IsEditable="True"  Margin="0,0,0,-0.333" Grid.RowSpan="2" />
                             </Grid>
                             <Grid>
                                 <Grid.ColumnDefinitions>

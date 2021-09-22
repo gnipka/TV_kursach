@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TV_kursach"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="1000">
+        Title="MainWindow" Height="600" Width="1000" Icon="TV_4089.png">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="63*"/>
@@ -32,9 +32,9 @@
                         <ColumnDefinition Width="730"></ColumnDefinition>
                         <ColumnDefinition></ColumnDefinition>
                     </Grid.ColumnDefinitions>
-                    <DataGrid Grid.Column="0" CanUserAddRows="False" AutoGenerateColumns="True" x:Name="dataGrid" HorizontalAlignment="Left" Margin="0 0 0 5" VerticalAlignment="Top" Width="730" Height="360" ItemsSource="{Binding tv}">
+                    <DataGrid Grid.Column="0" CanUserAddRows="False" AutoGenerateColumns="True" x:Name="dataGrid" HorizontalAlignment="Left" Margin="0 0 0 0" VerticalAlignment="Top" Width="730" Height="360" ItemsSource="{Binding tv}">
                     </DataGrid>
-                    <StackPanel Grid.Column="1">
+                    <StackPanel Grid.Column="1" Margin="0,0,-18,0">
                         <Button Height="32" Content="Произодственный заказ" Click="Button_Click_OpenOrder" Margin="20 4 0 4" Background="AliceBlue" FontWeight="Regular">
                             <Button.Resources>
                                 <Style TargetType="Border">
@@ -63,7 +63,14 @@
                                 </Style>
                             </Button.Resources>
                         </Button>
-                        
+                        <Button Height="35" Content="Журнал выхода"  Click="Button_Click_Open_Usage_log" Margin="20 10 0 4" Background="AliceBlue" FontWeight="Regular">
+                            <Button.Resources>
+                                <Style TargetType="Border">
+                                    <Setter Property="CornerRadius" Value="5"/>
+                                </Style>
+                            </Button.Resources>
+                        </Button>
+
                     </StackPanel>
                 </Grid>
                 <StackPanel x:Name="stackPanel">

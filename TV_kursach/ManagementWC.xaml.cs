@@ -64,7 +64,7 @@ namespace TV_kursach
             string timework = textboxTimeWork.Text;
             int num;
             bool isnum = int.TryParse(timework, out num);
-            if (isnum)
+            if (isnum || status == "Недоступен")
             {
                 if (status == "Недоступен")
                 {
@@ -83,6 +83,7 @@ namespace TV_kursach
                     {
                         if (status == "Доступен")
                         {
+
                             MySqlCommand cmd = new MySqlCommand();
                             cmd.Connection = ConnectionWithDB.GetConnection();
                             cmd.CommandText = "INSERT INTO work_center VALUES(@IDWC, @status, @timework)";

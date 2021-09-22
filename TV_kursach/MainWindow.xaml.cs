@@ -163,5 +163,11 @@ namespace TV_kursach
             Order order = new Order();
             order.Show();
         }
+
+        private void Button_Click_Open_Usage_log(object sender, RoutedEventArgs e)
+        {
+            Usage_log usage_Log = new Usage_log();
+            usage_Log.Show();
+        }
     }
 }

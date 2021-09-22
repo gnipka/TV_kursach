@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TV_kursach"
         mc:Ignorable="d"
-        Title="PurchaseOrder" Height="425.031" Width="659.269">
+        Title="PurchaseOrder" Height="425.031" Width="659.269" Icon="TV_4089.png">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="238*"/>
@@ -30,11 +30,11 @@
                         <StackPanel Grid.ColumnSpan="2">
                             <Grid>
                                 <TextBlock HorizontalAlignment="Left" Text="ID склада" FontSize="20" Margin="156,0,0,0"></TextBlock>
-                                <ComboBox x:Name="comboboxIDStore" IsReadOnly="False" IsEditable="True" FontSize="20" Height="32" Margin="264,0,116,0" Width="170" RenderTransformOrigin="0.096,0.457" VerticalAlignment="Top" />
+                                <ComboBox x:Name="comboboxIDStore" IsReadOnly="True" IsEditable="True" FontSize="20" Height="32" Margin="264,0,116,0" Width="170" RenderTransformOrigin="0.096,0.457" VerticalAlignment="Top" />
                             </Grid>
                             <Grid>
                                 <TextBlock HorizontalAlignment="Left" Text="ID материала" FontSize="20" Margin="118,0,0,0"></TextBlock>
-                                <ComboBox x:Name="comboboxIDnom" IsReadOnly="False" IsEditable="True" HorizontalAlignment="Left" FontSize="20" Height="32" Margin="264,0,0,0"  VerticalAlignment="Top" Width="170" RenderTransformOrigin="0.096,0.457"/>
+                                <ComboBox x:Name="comboboxIDnom" IsReadOnly="True" IsEditable="True" HorizontalAlignment="Left" FontSize="20" Height="32" Margin="264,0,0,0"  VerticalAlignment="Top" Width="170" RenderTransformOrigin="0.096,0.457"/>
                             </Grid>
                             <Grid>
                                 <Grid.ColumnDefinitions>
